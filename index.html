@@ -8,68 +8,102 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h2>Notifications <span class="notifications-counter">(3)</span></h2>
-      <span class="mark-all" onclick="markAllRead()">Mark all as read</span>
-    </div>
-    <ul id="list">
-      <li class="notification new-notification">
-        <img src="https://i.pravatar.cc/40?img=1" class="avatar" />
-        <div class="notification-infos">
-          <strong>Mark Webber</strong> reacted to your recent post <a href="#" class="notification-link-post">My first tournament today!</a>
-        </div>
-        <span class="notification-dot">⬤</span>
-      </li>
-      <li class="notification new-notification">
-        <img src="https://i.pravatar.cc/40?img=2" class="avatar" />
-        <div class="notification-infos">
-          <strong>Angela Gray</strong> followed you
-        </div>
-        <span class="notification-dot">⬤</span>
-      </li>
-      <li class="notification new-notification">
-        <img src="https://i.pravatar.cc/40?img=3" class="avatar" />
-        <div class="notification-infos">
-          <strong>Jacob Thompson</strong> has joined your group <a href="#" class="notification-link-post">Chess Club</a>
-        </div>
-        <span class="notification-dot">⬤</span>
-      </li>
-      <li class="notification" onclick="toggleMessage(this)">
-        <img src="https://i.pravatar.cc/40?img=4" class="avatar" />
-        <div class="notification-infos">
-          <strong>Rizky Hasanuddin</strong> sent you a private message
-          <div class="private-message">
-            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+  <header>
+    <h1 style="display: none;">Notifications Page</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="header">
+        <h2>Notifications <span class="notifications-counter">3</span></h2>
+        <button class="mark-all-button" onclick="markAllRead()">Mark all as read</button>
+      </div>
+
+      <ul id="list">
+        <li class="notification new-notification">
+          <img src="https://i.pravatar.cc/40?img=1" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Mark Webber</strong></a> reacted to your recent post
+              <a href="#" class="notification-link-post">My first tournament today!</a>
+            </div>
           </div>
-        </div>
-      </li>
-      <li class="notification">
-        <img src="https://i.pravatar.cc/40?img=5" class="avatar" />
-        <div class="notification-infos">
-          <strong>Kimberly Smith</strong> commented on your picture
-        </div>
-        <img src="https://picsum.photos/40/40?random=1" class="avatar" />
-      </li>
-      <li class="notification">
-        <img src="https://i.pravatar.cc/40?img=6" class="avatar" />
-        <div class="notification-infos">
-          <strong>Nathan Peterson</strong> reacted to your recent post <a href="#" class="notification-link-post">5 end-game strategies to increase your win rate</a>
-        </div>
-        <span class="notification-dot">⬤</span>
-      </li>
-      <li class="notification">
-        <img src="https://i.pravatar.cc/40?img=7" class="avatar" />
-        <div class="notification-infos">
-          <strong>Anna Kim</strong> left the group <a href="#" class="notification-link-post">Chess Club</a>
-        </div>
-        <span class="notification-dot">⬤</span>
-      </li>
-    </ul>
-    <div class="footer">
-      Challenge by Crio.Do. Coded by Ketan Makode.
+          <span class="notification-dot">⬤</span>
+        </li>
+
+        <li class="notification new-notification">
+          <img src="https://i.pravatar.cc/40?img=2" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Angela Gray</strong></a> followed you
+            </div>
+          </div>
+          <span class="notification-dot">⬤</span>
+        </li>
+
+        <li class="notification new-notification">
+          <img src="https://i.pravatar.cc/40?img=3" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Jacob Thompson</strong></a> has joined your group
+              <a href="#" class="notification-link-post">Chess Club</a>
+            </div>
+          </div>
+          <span class="notification-dot">⬤</span>
+        </li>
+
+        <li class="notification" onclick="toggleMessage(this)">
+          <img src="https://i.pravatar.cc/40?img=4" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Rizky Hasanuddin</strong></a> sent you a private message
+            </div>
+            <div class="private-message notification-text-private-message">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+            </div>
+          </div>
+        </li>
+
+        <li class="notification">
+          <img src="https://i.pravatar.cc/40?img=5" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Kimberly Smith</strong></a> commented on your picture
+            </div>
+          </div>
+          <img src="https://picsum.photos/40/40?random=1" class="avatar" />
+        </li>
+
+        <li class="notification">
+          <img src="https://i.pravatar.cc/40?img=6" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Nathan Peterson</strong></a> reacted to your recent post
+              <a href="#" class="notification-link-post">5 end-game strategies to increase your win rate</a>
+            </div>
+          </div>
+          <span class="notification-dot">⬤</span>
+        </li>
+
+        <li class="notification">
+          <img src="https://i.pravatar.cc/40?img=7" class="avatar" />
+          <div class="notification-infos">
+            <div class="notification-text">
+              <a href="#" class="profile-link"><strong>Anna Kim</strong></a> left the group
+              <a href="#" class="notification-link-post">Chess Club</a>
+            </div>
+          </div>
+          <span class="notification-dot">⬤</span>
+        </li>
+      </ul>
+
+      <footer class="footer">
+      Challenge by
+      <a href="https://www.crio.do" target="_blank">Crio.Do</a>. Coded by
+      <a href="https://www.github.com/laxmijha3598" target="_blank">Laxmi Jha</a>.
+     </footer>
     </div>
-  </div>
+  </main>
 
   <script>
     function markAllRead() {
@@ -78,7 +112,7 @@
         const dot = n.querySelector('.notification-dot');
         if (dot) dot.style.display = 'none';
       });
-      document.querySelector('.notifications-counter').textContent = '(0)';
+      document.querySelector('.notifications-counter').textContent = '0';
     }
 
     function toggleMessage(notificationEl) {
